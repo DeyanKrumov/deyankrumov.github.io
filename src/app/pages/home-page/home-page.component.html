@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <div class="page-header">
+<div class="wrapper" scrollSpy [spiedTags]="['SECTION']" (sectionChange)="onSectionChange($event)">
+  <section class="page-header" id="section1">
     <img class="path" src="assets/img/blob.png" />
 
     <img class="path2" src="assets/img/path2.png" />
@@ -17,7 +17,7 @@
         class="row row-grid  align-items-center text-left">
         <div class="col-lg-6 col-md-6 border-gradient border-gradient-green">
           <h1 class="text-white">
-            Safety on the roads <br />
+            Safety on the roads<br />
 
             <span class="text-white"> for all of us </span>
           </h1>
@@ -65,11 +65,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <section class="section section-lg">
+  </section>
+
+  <section class="section section-lg" id="section2">
     <section class="section">
       <img class="path" src="assets/img/path4.png" />
-
       <div class="container">
         <div class="row row-grid justify-content-between">
           <div class="col-md-5 mt-lg-5">
@@ -192,7 +192,7 @@
       </div>
     </section>
   </section>
-  <section class="section section-lg">
+  <section class="section section-lg" id="section3">
     <img class="path" src="assets/img/path4.png" />
 
     <img class="path2" src="assets/img/path5.png" />
@@ -253,7 +253,7 @@
       </div>
     </div>
   </section>
-  <section class="section section-lg section-safe">
+  <section class="section section-lg section-safe" id="section4">
     <img class="path" src="assets/img/path5.png" />
 
     <div class="container">
@@ -333,7 +333,7 @@
       </div>
     </div>
   </section>
-  <section class="section section-lg">
+  <section class="section section-lg" id="section5">
     <img class="path" src="assets/img/path4.png" />
 
     <img class="path2" src="assets/img/path2.png" />
@@ -356,7 +356,7 @@
       </div>
     </div>
   </section>
-  <section class="section section-lg section-coins">
+  <section class="section section-lg section-coins" id="section6">
     <img class="path" src="assets/img/path3.png" />
 
     <div class="container">

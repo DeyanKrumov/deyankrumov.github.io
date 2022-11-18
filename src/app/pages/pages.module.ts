@@ -22,6 +22,7 @@ import { ProfilepageComponent } from './examples/profilepage/profilepage.compone
 import { RegisterpageComponent } from './examples/registerpage/registerpage.component';
 import { LandingpageComponent } from './examples/landingpage/landingpage.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ScrollSpyDirective } from './directives/scrollSpy.directive';
 
 @NgModule({
     imports: [
@@ -48,6 +49,7 @@ import { HomePageComponent } from './home-page/home-page.component';
         RegisterpageComponent,
         LandingpageComponent,
         HomePageComponent,
+        ScrollSpyDirective,
     ],
     exports: [IndexComponent, ProfilepageComponent, RegisterpageComponent, LandingpageComponent],
     providers: [],
