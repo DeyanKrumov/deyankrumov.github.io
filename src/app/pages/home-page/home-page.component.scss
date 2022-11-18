@@ -1,6 +1,17 @@
 .main-video-container {
     position: absolute;
-} video {
+}
+
+.border-shadow-bottom {
+    box-shadow: 0px -80px 80px -90px #000 inset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+video {
     width: 100%;
 }
 
@@ -8,16 +19,35 @@
     height: 100%;
 }
 
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    padding: 10px;
+}
+
+.border-gradient-green {
+    border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+}
+
 @media only screen and (min-width: 800px) {
     .page-header .content-center {
         max-width: 85%;
     }
-    
+
 }
 
 @media only screen and (max-width: 800px) {
     .page-header .content-center .row {
         display: block;
+        text-align: center !important;
     }
-    
+
+    .content-center .col-md-6 {
+        max-width: 100%;
+    }
+
+    .page-header .content-center {
+        top: 36%;
+    }
 }

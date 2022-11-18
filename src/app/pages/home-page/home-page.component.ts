@@ -11,6 +11,8 @@ export class HomePageComponent implements OnInit {
     ngOnInit(): void {
         var body = document.getElementsByTagName('body')[0];
         body.classList.add('landing-page');
+        const mainVideo: any = document.getElementById('main-video');
+        mainVideo.play();
     }
 
     ngOnDestroy() {
