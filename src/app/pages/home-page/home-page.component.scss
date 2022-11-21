@@ -8,6 +8,11 @@
     position: absolute;
 }
 
+.section-vh {
+    height: 100vh;
+    // border-style: solid;
+}
+
 .border-shadow-bottom {
     box-shadow: 0px -80px 80px -90px #000 inset;
     position: absolute;
@@ -34,6 +39,69 @@ video {
 
 .border-gradient-green {
     border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+}
+
+#section2 {
+    video {
+        // border-style: solid;
+    }
+
+    #sec-video {
+        top: 0;  
+        pointer-events: none;
+    }
+
+    .content-center {
+        max-width: 1920px;
+        padding: 0;
+
+        .row {
+            margin: 0;
+        }
+
+        #sec-text-box {
+            margin-left: 5%;
+            padding: 0;
+
+            .card {
+                // z-index: 1;
+                margin: 0;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 800px) {
+        #sec-video {
+            top: auto;  
+        }
+
+        .content-center {
+            #sec-text-box {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1500px) {
+        #sec-video {
+            top: -45%;  
+        }
+
+        .content-center {
+            top: 400px;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) and (min-width: 800px) {
+        #sec-video {
+            top: 30%;  
+        }
+
+        .content-center {
+            top: 400px;
+        }
+    }
 }
 
 @media only screen and (min-width: 800px) {
