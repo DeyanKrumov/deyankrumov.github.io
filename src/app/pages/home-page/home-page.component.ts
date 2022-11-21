@@ -13,11 +13,9 @@ export class HomePageComponent implements OnInit {
     constructor(private _router: Router, private _route: ActivatedRoute, private _location: Location) {}
 
     ngOnInit(): void {
-        var body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
         body.classList.add('landing-page');
-        const mainVideo: any = document.getElementById('main-video');
-        mainVideo.play();
-
+        
         this._route.params.subscribe((params) => {
             this.currentSection = params['sectionId'];
             this.scrollTo(this.currentSection);
@@ -25,16 +23,16 @@ export class HomePageComponent implements OnInit {
     }
 
     ngOnDestroy() {
-        var body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
         body.classList.remove('landing-page');
     }
 
-    scrollTo(section) {
+    scrollTo(section: string) {
         document.querySelector('#' + section).scrollIntoView();
     }
 
     onSectionChange(sectionId: string) {
-        this._location.go('home-page/' + sectionId);
+        this._location.go('/home-page/' + sectionId);
         this.currentSection = sectionId;
     }
 }

@@ -10,9 +10,8 @@ import { LandingpageComponent } from './pages/examples/landingpage/landingpage.c
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'home-page', pathMatch: 'full' },
+    { path: '', redirectTo: 'home-page/section1', pathMatch: 'full' },
     { path: 'home', component: IndexComponent },
-    { path: 'home-page', component: HomePageComponent },
     { path: 'home-page/:sectionId', component: HomePageComponent },
     { path: 'profile', component: ProfilepageComponent },
     { path: 'register', component: RegisterpageComponent },
@@ -20,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes)],
+    imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes, { useHash: true })],
     exports: [],
 })
 export class AppRoutingModule {}
