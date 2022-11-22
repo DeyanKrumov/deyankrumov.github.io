@@ -9,7 +9,8 @@
 }
 
 .section-vh {
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     // border-style: solid;
 }
 
@@ -127,7 +128,6 @@ video {
 }
 
 #section3 {
-    height: fit-content;
     .market-picture {
         scale: 3;
     }
@@ -158,6 +158,27 @@ video {
 
         #marketplace-icon {
             scale: 1;
+        }
+    }
+}
+
+#section4 {
+    .text-right {
+        margin: 0;
+        position: absolute;
+        bottom: 0; 
+        width: 100;
+    }
+
+    .info {
+        .steps-box {
+            position: relative;
+            margin: 0 auto; 
+            text-align: left;
+        }
+
+        hr {
+            width: 100%;
         }
     }
 }
