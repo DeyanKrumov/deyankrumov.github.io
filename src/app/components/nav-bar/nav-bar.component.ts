@@ -10,6 +10,7 @@ import { isLocalLink } from '../../shared/functions/helperFuncs';
 export class NavBarComponent implements OnInit {
     public isCollapsed = true;
     @Input() public navLabel: string;
+    @Input() public navLogoUrl: string;
     @Input() public navItems: Array<NavItem>;
     public isLocalLink = isLocalLink;
 
