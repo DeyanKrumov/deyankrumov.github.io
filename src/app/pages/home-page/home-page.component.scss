@@ -183,3 +183,19 @@ video {
         }
     }
 }
+
+.footer {
+    #footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        font-size: x-large;
+        color: white;
+
+        img {
+            height: 2.5vh;
+            margin: 3%;
+        }
+    }
+}
