@@ -15,11 +15,13 @@ export class HomePageComponent implements OnInit {
     ngOnInit(): void {
         const body = document.getElementsByTagName('body')[0];
         body.classList.add('landing-page');
-        
+
         this._route.params.subscribe((params) => {
             this.currentSection = params['sectionId'];
             this.scrollTo(this.currentSection);
         });
+
+        this.playAllVideos();
     }
 
     ngOnDestroy() {
@@ -34,5 +36,13 @@ export class HomePageComponent implements OnInit {
     onSectionChange(sectionId: string) {
         this._location.go('/home-page/' + sectionId);
         this.currentSection = sectionId;
+    }
+
+    private playAllVideos() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach((video) => {
+            video.muted = true;
+            video.play();
+        });
     }
 }
